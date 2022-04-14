@@ -2,11 +2,11 @@ package ArraysExamples;
 
 public class ResizeArray {
 
-	static int [] temp;
 	
-public  static void resize(int[] a, int capacity) {
+	
+public  static int[] resize(int[] a, int capacity) {
 		
-		temp = new int[capacity];
+	int [] temp = new int[capacity];
 		
 	///Important example to understand pass by value and pass by reference concept and the concept of scope of a local variable and objects pointing also
 			
@@ -26,8 +26,8 @@ public  static void resize(int[] a, int capacity) {
 			}
 		
 		}
-				a=temp;
-			System.out.println(a.length);
+				return temp;
+			//System.out.println(a.length);
 
 		}
 	
@@ -36,7 +36,7 @@ public  static void resize(int[] a, int capacity) {
 		int[] a= {1,2,3,4,5};
 		
 		//ResizeArray ra = new ResizeArray();
-		resize(a, 8);
+		int []temp = resize(a, 2);
 		
 		for(int i:temp) {
 			System.out.println(i);
