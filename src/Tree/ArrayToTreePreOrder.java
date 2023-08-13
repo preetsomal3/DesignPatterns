@@ -1,28 +1,14 @@
 package Tree;
 
-import Tree.BTwithPreOrderTraversal.Node;
-
-public class BTwithPostOrderTraversal {
+public class ArrayToTreePreOrder {
 
 	public static void main(String[] args) {
 
 		int arr[]= {1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
 		
 		Node root = binaryTree(arr);
-		//System.out.println(root.right.data);
-		postOrderTraversal(root);
+		System.out.println(root.right.data);
 
-	}
-	
-	public static void postOrderTraversal(Node root) {
-		
-		if(root==null) {
-			return;
-		}
-		
-		postOrderTraversal(root.left);
-		postOrderTraversal(root.right);
-		System.out.println(root.data);
 	}
 	
 	static class Node{
@@ -36,7 +22,7 @@ public class BTwithPostOrderTraversal {
 	}
 	
 	static int ind =-1;
-	public static  Node binaryTree(int []arr) {
+	public static Node binaryTree(int []arr) {
 		
 		ind++;
 		if(arr[ind]==-1) {

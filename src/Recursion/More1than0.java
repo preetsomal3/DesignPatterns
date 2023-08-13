@@ -9,7 +9,7 @@ public class More1than0 {
 		
 		
 		More1than0 s = new More1than0();
-		System.out.println(s.NBitBinary(2));
+		System.out.println(s.NBitBinary(3));
 	}
 	
     ArrayList<String> NBitBinary(int N) {
